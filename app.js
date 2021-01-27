@@ -9,13 +9,11 @@ const io = require('socket.io')(server);
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-
 let socketsConnected = new Set();
 
 io.on('connection', onConneted);
 
 function onConneted(socket) {
-  console.log(socket.id);
   socketsConnected.add(socket.id);
 
   io.emit('clients-total', socketsConnected.size);
