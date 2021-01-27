@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Chat app</title>
+</head>
+<body>
+  <h1 class="title">myChat 🙄</h1>
+  <div class="main">
+    
+    <div class="name">
+      <span><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+        <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+      </svg></span>
+      <input type="text" id="name-input" class="name-input" value="anonymous" maxlength="20">
+    </div>
+
+    <ul class="message-container" id="message-container">
+      <li class="message-left">
+        <p class="message">
+          Lorem ipsum
+          <span>bluebird * 26 July 10:40</span>
+        </p>
+      </li>
+
+      <li class="message-right">
+        <p class="message">
+          Lorem ipsum
+          <span>bluebird * 26 July 10:40</span>
+        </p>
+      </li>
+
+      <li class="message-feedback">
+        <p class="feedback" id="feedback">
+          Killer is typing a message
+        </p>
+      </li>
+    </ul>
+
+    <form action="#" class="message-form" id="message-form">
+      <input type="text" name="message" class="message-input" id="message-input">
+      <div class="v-divider"></div>
+      <button type="submit" class="send-button">
+        send <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cursor-fill" viewBox="0 0 16 16">
+          <path d="M14.082 2.182a.5.5 0 0 1 .103.557L8.528 15.467a.5.5 0 0 1-.917-.007L5.57 10.694.803 8.652a.5.5 0 0 1-.006-.916l12.728-5.657a.5.5 0 0 1 .556.103z"/>
+        </svg></span>
+      </button>
+    </form>
+
+  </div>
+  <h3 class="clients-total" id="clients-total">Total Clients: 2</h3>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous"></script>
+  <script src="main.js"></script>
+</body>
+</html>
